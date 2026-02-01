@@ -336,6 +336,7 @@ def dag_next_execution(args) -> None:
             print(
                 "[WARN] No following schedule can be found. "
                 "This DAG may have schedule interval '@once' or `None`.",
+                "or have a schedule of '@once' or None.",
                 file=sys.stderr,
             )
             print(None)
