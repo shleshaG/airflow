@@ -249,6 +249,17 @@ date would then be the logical date + scheduled interval.
     For more information on ``logical date``, see :ref:`data-interval` and
     :ref:`faq:what-does-execution-date-mean`.
 
+DAG Versioning
+~~~~~~~~~~~~~~
+
+In Airflow 3, DAGs are versioned automatically when their definition changes.
+A new DAG version is created whenever the DAG structure is modified, for example
+when tasks or dependencies are added, removed, or updated.
+
+Each DAG run is associated with the version of the DAG that existed at the time
+the run was scheduled. Changes made to a DAG after a run has been scheduled do
+not affect already running or completed DAG runs.
+
 Dag Assignment
 --------------
 
